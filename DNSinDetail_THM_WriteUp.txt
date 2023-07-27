@@ -1,0 +1,125 @@
+DNS in Detail 
+
+**************************************************************************************************************************
+
+Task 1: What is DNS ? 
+
+[*] DNS is Domain Name System 
+
+[*] DNS provides a simple way for us to communicate with devices on the internet without remembering complex numbers.
+
+[Question 1]: What does DNS stand for?
+
+    [!] Answer: Domain Name System 
+
+**************************************************************************************************************************
+
+Task 2: Domain Hierarchy 
+
+[*] Read this task and understand about three types of DNS and complete all question 
+
+[Question 1]:  What is the maximum length of a subdomain?
+
+    [!] Answer: 63
+
+[Question 2]: Which of the following characters cannot be used in a subdomain ( 3 b _ - )?
+
+    [!] Answer: _ 
+
+[Question 3]: What is the maximum length of a domain name?
+
+    [!] Answer: 253
+
+[Question 4]: What type of TLD is .co.uk?
+
+    [!] Answer: ccTLD
+
+**************************************************************************************************************************
+
+Task 3: Record Types
+
+[*] DNS isn't just for websites though, and multiple types of DNS record exist.
+
+    [+] A Record
+
+    [+] AAAA Record
+
+    [+] CNAME Record
+
+    [+] MX Record
+
+    [+] TXT Record
+
+[Question 1]:  What type of record would be used to advise where to send email?
+
+    [!] Answer: MX
+
+[Question 2]: What type of record handles IPv6 addresses?
+
+    [!] Answer: AAAA
+
+**************************************************************************************************************************
+
+Task 4: Making A Request
+
+[*] Read and understand how does DNS make a request 
+
+    [+] First, your computer first checks its local cache to see if you've previously looked up the address recently; if not, a request to your Recursive DNS Server will be made.
+
+    [+] The request cannot be found locally, a journey begins to find the correct answer, starting with the internet's root DNS servers.
+
+    [+] The root server will recognise the Top Level Domain of .com and refer you to the correct TLD server that deals with .com addresses.
+
+    [+] The TLD server holds records for where to find the authoritative server to answer the DNS request.
+
+    [+] Depending on the record type, the DNS record is then sent back to the Recursive DNS Server, where a local copy will be cached for future requests and then relayed back to the original client that made the request
+
+[Question 1]:  What field specifies how long a DNS record should be cached for?
+
+    [!] Answer: TTL
+
+[Question 2]: What type of DNS Server is usually provided by your ISP?
+
+    [!] Answer: recursive 
+
+[Question 3]: What type of server holds all the records for a domain?
+
+    [!] Answer: authoritative
+
+**************************************************************************************************************************
+
+Task 5: Practical
+
+[*] Deploy the View Site 
+
+[*] we can build requests to make DNS queries and view the results. 
+
+[Question 1]: What is the CNAME of shop.website.thm?
+
+    [+] Change type to CNAME and type URL shop 
+
+    [+] Send DNS requests
+
+    [!] Answer: shops.myshopify.com
+
+[Question 2]: What is the value of the TXT record of website.thm?
+
+    [+] Change type to TXT and Send DNS request. We can see the flag 
+
+    [!] Answer: THM{7012BBA60997F35A9516C2E16D2944FF}
+
+[Question 3]:  What is the numerical priority value for the MX record? 
+
+    [+] Do same question 2
+
+    [!] Answer: 30
+
+[Question 4]: What is the IP address for the A record of www.website.thm?
+
+    [!] Answer: 10.10.10.10
+
+
+    
+
+
+
